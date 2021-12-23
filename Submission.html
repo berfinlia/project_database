@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AGD Submission</title>
+        <style>
+            /*global*/
+            body{
+                font-size: 15px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                line-height: 1.5;
+                padding: 0;
+                margin: 0;
+                background-color: #dfeeff;
+            }
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+
+            }
+
+            ul{
+                    margin: none;
+                    padding: none;
+
+            }
+
+            .button{
+                height: 38px;
+                background:rgb(7, 2, 53);
+                color: white;
+                border: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+
+            }
+            .button:hover{
+                background-color: #003d80;
+            }
+            /*header*/
+            header{
+                background: #003d80;
+                color:white;
+                padding-top: 30px;
+                min-height: 70px;
+                border-bottom: solid 5px rgb(7, 2, 53);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+            /*navigation*/
+            header a{
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+
+            header li{ 
+                display: inline;
+                padding: 0 20px 0 20px;
+             }
+            
+            header #branding{ 
+                float: left;
+            }
+
+            header #branding h1{
+                    margin: 0;
+                }
+
+            header nav{
+                float: right;
+             }
+
+             header .current a{
+                 color: #001429;
+                 font-weight: bold;
+             }
+             header a:hover{
+                 color: rgb(100, 114, 175);
+                 font-weight: bold;
+             }
+             #showcase{
+                 min-height: 400px;
+                 background: url(./img/showcase.jpg) no-repeat 0 -200px;
+                 text-align: center;
+                 color: #001429;
+             }
+             #showcase h1{
+                 margin-top:100px;
+                 font-size: 65px;
+                 margin-bottom: 10px;
+             }
+             #showcase p{
+                 font-size: 20px;
+                 color: rgb(0, 0, 0);
+             }
+
+             .form{
+                margin-top: 10px;    
+                text-align: center;
+                    margin-right: 25%;
+                    margin-left: 25%; 
+                    padding-left: 10%;
+                    padding-right: 10%;
+                }
+            
+             /*footer*/
+            footer{
+                padding: 20px;
+                margin-top: 20px;
+                background-color: #001429;
+                color: white;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id=branding><h1><span class="hightlight">Austrian</span> Gaming Database</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="library.html">Library</a></li>
+                    <li class="current"><a href="Submission.html">Submit</a></li>
+                    
+                </ul>
+            </nav> </div>
+        </header>
+        
+        <section id="showcase">
+            <div class="container">
+                <h1>Submission Form</h1>
+                <p>Please fill in all <strong>required*</strong> information and submit your thesis!</p>
+            </div>
+        </section>
+        
+        <!--fill in required things, verbinden mit php (auch im newsletter)-->
+        <form class="form" action="process.php" method="POST" target="_self">
+            <fieldset>
+                 <legend>Vorname / First Name*</legend>
+                 <input type="text" name="firstName" placeholder="First Name" min="1">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>Nachname / Last Name*</legend>
+                <input type="text" name="lastName" placeholder="Last Name" min="1">
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>E-Mail*</legend>
+                <input type="email" name="email" placeholder="mustermann@hotmail.com" min="1">
+            </fieldset>
+             <br>
+             <fieldset>
+                 <legend>Universität / University*</legend>
+                 <select name="University" id="">
+                    <option value="FH des BFI">FH des BFI Wien</option>
+                    <option value="FH Campus">FH Campus Wien</option>
+                    <option value="Technikum Wien">Technikum Wien</option>
+                    <option value="TU Graz">Technische Universität Graz</option>
+                    <option value="WU Wien">Wirtschaftsuniversität Wien</option>
+                    <option value="FH Salzburg">Fachhochschule Salzburg</option>
+                    <option value="other">andere/other</option>
+                </select>
+             </fieldset>
+             <br>
+             <fieldset>
+                 <legend>andere Universität / other University</legend>
+                 <input type="text" name="other Univerity" placeholder="other University">
+             </fieldset>
+             <br>
+             <fieldset>
+                 <legend>Studiengang / Course*</legend>
+                 <input type="text" name="Course" id="" placeholder="z.B. Interactive Media & Games Business" min="1">
+
+             </fieldset> <br>
+            <fieldset>
+                <legend>Titel / Title*</legend>
+                <textarea name="text" id="" cols="30" rows="3" min="1"></textarea>
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>BetreuerIn / Supervisior</legend>
+                <input type="text" name="BetreuerIn">
+            </fieldset> <br>
+            <fieldset>
+                <legend>Upload file* (*.pdf only)</legend>
+            <input type="file"></fieldset> <br>
+            <div>
+                <input type="checkbox" name="DSGVO" id="DSGVO">
+                <label for="DSGVO">Ich bestätige hiermit, dass blablabla....*</label> </div> <br>
+
+                <button type="submit" class="button">Submit</button>
+        </form>
+        <br>
+       <footer> <p><cite> Database Project </cite>by Bedirhan, Isabella & Berfin</p></footer>
+    </body>
+</html>

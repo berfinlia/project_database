@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AGD Library</title>
+        <style>
+            /*global*/
+            body{
+                font-size: 15px;
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+                line-height: 1.5;
+                padding: 0;
+                margin: 0;
+                background-color: #dfeeff;
+            }
+            .container {
+                width: 80%;
+                margin: auto;
+                overflow: hidden;
+
+            }
+
+            ul{
+                    margin: none;
+                    padding: none;
+
+            }
+
+            .button_1{
+                height: 38px;
+                background:rgb(7, 2, 53);
+                color: white;
+                border: 0;
+                padding-left: 20px;
+                padding-right: 20px;
+
+            }
+            /*header*/
+            header{
+                background: #003d80;
+                color:white;
+                padding-top: 30px;
+                min-height: 70px;
+                border-bottom: solid 5px rgb(7, 2, 53);
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+            /*navigation*/
+            header a{
+                color: white;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 16px;
+            }
+
+            header li{ 
+                display: inline;
+                padding: 0 20px 0 20px;
+             }
+            
+            header #branding{ 
+                float: left;
+            }
+
+            header #branding h1{
+                    margin: 0;
+                }
+
+            header nav{
+                float: right;
+             }
+
+             header .current a{
+                 color: #001429;
+                 font-weight: bold;
+             }
+             header a:hover{
+                 color: rgb(100, 114, 175);
+                 font-weight: bold;
+             }
+             #showcase{
+                 min-height: 400px;
+                 background: url(./img/showcase.jpg) no-repeat 0 -200px;
+                 text-align: center;
+                 color: #001429;
+             }
+             #showcase h1{
+                 margin-top:100px;
+                 font-size: 65px;
+                 margin-bottom: 10px;
+             }
+             #showcase p{
+                 font-size: 20px;
+                 color: rgb(0, 0, 0);
+             }
+             /*searchbar*/
+             #searchbar{
+                 padding: 15px;
+                 color: white;
+                 background: #003d80;
+             }
+
+             #searchbar form{
+                 float:right;
+                 margin-top: 15px;
+                 margin-right: 600px;
+                 margin-bottom: 15px;
+             }
+
+             #searchbar input{
+                 padding: 4px;
+                 height: 25px;
+                 width: 250px;
+             }
+             tr:nth-child(even) {
+                background-color: #d7dfff; }
+                tr {border-bottom: 1px solid rgb(248, 245, 255)}
+                tr:hover{background-color: white;}
+                table, th, td {
+                border: 1px solid black;}
+
+        
+             /*footer*/
+            footer{
+                padding: 20px;
+                margin-top: 20px;
+                background-color: #001429;
+                color: white;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <div id=branding><h1><span class="hightlight">Austrian</span> Gaming Database</h1></div>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="current"><a href="library.html">Library</a></li>
+                    <li><a href="Submission.html">Submit</a></li>
+                    
+                </ul>
+            </nav> </div>
+        </header>
+        
+        <section id="showcase">
+            <div class="container">
+                <h1>Search the library</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic unde consequatur quas suscipit ratione! </p>
+            </div>
+        </section>
+
+
+
+
+        <section id="searchbar">
+            <div class="container"> 
+                <form action="search.php">
+                    <input type="text">
+                    <button type="submit" class="button_1">Search</button>
+                </form>
+            </div>
+        </section>
+
+        <table style="width: 100%;">
+            <tr>
+                <th>Title</th>
+                <th>Name</th>
+                <th style="width: 20%;">University</th>
+                <th style="width: 10%;">Course</th>
+            </tr>
+            <tr>
+                <td>abc</td>
+                <td>berfin</td>
+                <th>FH des BFI</th>
+                <th>IMGB</th>
+            </tr>
+            <tr>
+                <td>def</td>
+                <td>bedirhan</td>
+                <th>FH des BFI</th>
+                <th>IMGB</th>
+            </tr><tr>
+                <td>ghj</td>
+                <td>isabella</td>
+                <th>FH des BFI</th>
+                <th>IMGB</th>
+            </tr><tr>
+                <td>klm</td>
+                <td>max mustermann</td>
+                <th>FH des BFI</th>
+                <th>IMGB</th>
+            </tr>
+        </table>
+
+
+
+        <footer> <p><cite> Database Project </cite>by Bedirhan, Isabella & Berfin</p></footer>
+    </body>
+  
+</html>
